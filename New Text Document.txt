@@ -4,3 +4,5 @@ Student Activity Managar ( Studio-1 Assignment)
   Gagandeep Kaur - 1000
   Arshdeep Singh - 1000
 */
+
+CREATE TABLE 
