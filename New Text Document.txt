@@ -1,0 +1,6 @@
+Student Activity Managar ( Studio-1 Assignment)
+/*Harshil Dholakiya - 1000114612
+  Liman Wu - 1000
+  Gagandeep Kaur - 1000
+  Arshdeep Singh - 1000
+*/
