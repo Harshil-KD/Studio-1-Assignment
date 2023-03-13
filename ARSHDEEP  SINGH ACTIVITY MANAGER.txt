@@ -1,6 +1,6 @@
-PRAGMA FOREIGN_KEYS = ON
+PRAGMA FOREIGN_KEYS = ON;
 
--- Creating Table 1 Parents Table .............
+-- Creating Table 1: Parent Table .............
 
 CREATE TABLE Parents(
 Parent_ID TEXT NOT NULL PRIMARY KEY,
@@ -12,7 +12,7 @@ Parent_Address TEXT,
 );
 
 
--- Creating Table 2 Students Table ..........
+-- Creating Table 2: Student Table ..........
 
 CREATE TABLE Student(
 Student_ID TEXT NOT NULL PRIMARY KEY,
@@ -28,7 +28,7 @@ FOREIGN KEY (Parent_ID) REFERENCES Parents(Parent_ID)
 );
 
 
--- Creating  Table 5 Academic Course ..........
+-- Creating  Table 5: Academic Course ..........
 
 CREATE TABLE Academic_Course(
 Course_ID TEXT NOT NULL PRIMARY KEY,
@@ -42,7 +42,7 @@ End_Time TEXT,
 );
 
 
---Table 6 After School Activity-----------------
+--Table 6: After School Activity-----------------
 
 CREATE TABLE AfterSchoolActivity(
 Activity_ID TEXT NOT NULL PRIMARY KEY,
@@ -53,12 +53,12 @@ Activity_Instructor's_Email TEXT,
 Activity_Period TEXT,
 Activity_Day TEXT,
 Activity_Start_Time TEXT,
-Activity_End_ TEXT,
+Activity_End_Time TEXT,
 Activity_Address TEXT
 );
 
 
--- Creating Table 4 Activity Enrollment Table ..........
+-- Creating Table 4: Activity Enrollment Table ..........
 
 CREATE TABLE Activity_Enrollment(
 Student_ID TEXT,
@@ -69,7 +69,7 @@ FOREIGN KEY (Activity_ID) REFERENCES After_School_Activity(Activity_ID)
 );
 
 
--- Creating  Table 3 AcademicCourse Enrollment Table
+-- Creating  Table 3: AcademicCourse Enrollment Table
 
 CREATE TABLE Course_Enrollment(
 Student_ID TEXT,
