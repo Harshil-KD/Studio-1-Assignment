@@ -41,6 +41,23 @@ Start_Time TEXT,
 End_Time TEXT,
 );
 
+--Table 6 After School Activity-----------------
+
+drop table AfterSchoolActivity;
+
+create table AfterSchoolActivity(
+Activity_ID text not null primary key,
+Activity_Name text not null,
+Activity_Description text not null,
+Activity_Instructor text not null,
+Activity_Instructor's_Email text not null,
+Activity_Period text not null,
+Activity_Day text,
+Activity_Start_Time text,
+Activity_End_ text,
+Activity_Address text
+);
+
 
 -- Creating Activity Enrollment Table ..........
 
@@ -62,4 +79,5 @@ Enrollment_Date2 TEXT,
 FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID),
 FOREIGN KEY (Course_ID) REFERENCES Academic_Course(Course_ID)
 );
+
 
