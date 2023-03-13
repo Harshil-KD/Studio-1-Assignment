@@ -1,0 +1,51 @@
+PRAGMA FOREIGN_KEYS = ON
+
+-- Creating Parents Table .............
+
+CREATE TABLE Parents(
+Parent_ID TEXT NOT NULL PRIMARY KEY,
+First_Name TEXT,
+Last_Name TEXT,
+Parent_Email TEXT,
+Parent_Phone INTEGER,
+Parent_Address TEXT,
+);
+
+
+-- Creating Students Table ..........
+
+CREATE TABLE Student(
+Student_ID TEXT NOT NULL PRIMARY KEY,
+First_Name TEXT,
+Last_Name TEXT,
+Student_Email TEXT,
+Student_Phone INTEGER,
+Student_Address TEXT,
+Student_Gender TEXT,
+Student_DOB TEXT,
+Parent_ID TEXT,
+FOREIGN KEY (Parent_ID) REFERENCES Parents(Parent_ID)
+);
+
+
+-- Creating Activity Enrollment Table ..........
+
+CREATE TABLE Activity_Enrollment(
+Student_ID TEXT,
+Activity_ID TEXT,
+Enrollment_Date1 TEXT,
+FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID),
+FOREIGN KEY (Activity_ID) REFERENCES After_School_Activity(Activity_ID)
+);
+
+
+-- Creating Course Enrollment Table
+
+CREATE TABLE Course_Enrollment(
+Student_ID TEXT,
+Course_ID TEXT,
+Enrollment_Date2 TEXT,
+FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID),
+FOREIGN KEY (Course_ID) REFERENCES Academic_Course(Course_ID)
+);
+
